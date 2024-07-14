@@ -3,7 +3,7 @@ import getAllUsers from '@/lib/getAllUsers'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-    title: 'Users',
+  title: 'Users',
 }
 
 export default async function UsersPage() {

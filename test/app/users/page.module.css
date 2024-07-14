@@ -1,0 +1,17 @@
+.main {
+    display: flex;
+    gap: 3rem;
+}
+
+.main a {
+    text-decoration: none;
+    padding: .15rem;
+    min-width: 50%;
+}
+
+.main a:hover {
+    background-color: rgb(121, 121, 130);
+    color: #d6d6d6;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
