@@ -1,0 +1,30 @@
+.form {
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: auto;
+}
+
+.form input, .form textarea {
+    padding: 0.8rem;
+    border-radius: .8rem;
+    /* outline-offset: none; */
+}
+
+.form textarea {
+    max-height: fit-content;
+    max-width: 640px;
+}
+
+.form input:focus, .form textarea:focus {
+    outline: gray;
+}
+
+.form button {
+    background: #00aa00;
+    color: whitesmoke;
+    padding: 0.08rem;
+    font-size: 24px;
+    border-radius: .8rem;
+}
