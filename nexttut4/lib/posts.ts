@@ -38,27 +38,21 @@ export function getSortedPostsData() {
 // Remark and remark-html helps generate the HTML for the markdown files
 
 export async function getPostData(id:string) {
-
     const fullPath = path.join(postsDirectory, `${id}.md`);
-
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
-
     const processedContent = await remark()
         .use(html)
         .process(matterResult.content)
-
     const contentHtml = processedContent.toString();
-
     const blogPostWithHTML: BlogPost & { contentHtml: string } = {
         id,
         title: matterResult.data.title,
         date: matterResult.data.date,
         contentHtml,
     }
-
     // Combine the data with id
     return blogPostWithHTML
 }
