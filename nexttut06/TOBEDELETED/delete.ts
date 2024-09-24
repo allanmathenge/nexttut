@@ -73,10 +73,10 @@ export async function POST(request: Request) {
 
 // DYNAMIC ROUTES
 
-export async function GET(request: Request) {
-    const id = request.urk.slice(request.url.lastIndexOf('/') + 1)
-    const res = await fetch(`${DATA_SOURCE_URL}/${id}`)
-    const todo: Todo = await res.json()
-    if (!todo.id) return NextResponse.json({ 'message': 'Todo id not found'})
-    return NextResponse.json(todo)
-}
+// export async function GET(request: Request) {
+//     const id = request.urk.slice(request.url.lastIndexOf('/') + 1)
+//     const res = await fetch(`${DATA_SOURCE_URL}/${id}`)
+//     const todo: Todo = await res.json()
+//     if (!todo.id) return NextResponse.json({ 'message': 'Todo id not found'})
+//     return NextResponse.json(todo)
+// }
