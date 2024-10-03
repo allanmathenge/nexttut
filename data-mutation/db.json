@@ -1,0 +1,27 @@
+{
+  "todos": [
+    {
+      "userId": 1,
+      "id": "ywi4",
+      "title": "Hello Everlyne",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": "098e",
+      "title": "Name cannot be blank",
+      "completed": false
+    },
+    {
+      "id": "ea9c",
+      "userId": 1,
+      "title": "New one"
+    },
+    {
+      "id": "9bc4",
+      "userId": 1,
+      "title": "This was nice",
+      "completed": true
+    }
+  ]
+}

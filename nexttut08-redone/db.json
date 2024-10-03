@@ -1,0 +1,28 @@
+{
+  "todos": [
+    {
+      "userId": 1,
+      "title": "Wave hello! 👋",
+      "completed": true,
+      "id": "1"
+    },
+    {
+      "id": "f266",
+      "userId": 1,
+      "title": "hello world",
+      "completed": false
+    },
+    {
+      "id": "9ae1",
+      "userId": 1,
+      "title": "Prefetch ",
+      "completed": false
+    },
+    {
+      "id": "30ef",
+      "userId": 1,
+      "title": "How are you",
+      "completed": true
+    }
+  ]
+}
