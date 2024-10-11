@@ -1,14 +1,16 @@
 import Posts from './components/Posts'
+import MyProfilePic from './components/MyProfilePic'
 
 export const revalidate = 10
 
 export default function Home() {
   return (
-    <main className="px-6 mx-auto">
+    <div className="mx-auto">
+      <MyProfilePic />
       <p className="mt-12 mb-12 text-3xl text-center dark:text-white">
-        Hello 👋 &nbsp;
+        Hello 👋 I'm Allan Mathenge
       </p>
       <Posts />
-    </main>
+    </div>
   )
 }

@@ -1,15 +1,17 @@
-import React from 'react'
-import { getSortedPostsData } from '@/lib/posts'
+import React from "react"
+import { getPostsMeta } from '@/lib/posts'
 import ListItem from './ListItem'
 
-export default function Posts() {
+export default async function Posts() {
 
-  const posts = getSortedPostsData()
+  const posts = await getPostsMeta()
+
+  if (!posts) return <p className="mt-10 text-center ">Sorry, no posts available!</p>
 
   return (
     <section className="mt-6 mx-auto max-w-2xl">
       <h2 className="text-4xl font-bold dark:text-white/80">Blogs</h2>
-      <ul className="w-full">
+      <ul className="w-full list-none p-0">
         {posts.map((post) => (
           <ListItem key={post.id} post={post} />
         ))}
