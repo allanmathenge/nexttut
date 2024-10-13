@@ -3,7 +3,7 @@ import { getPostsMeta } from "@/lib/posts"
 import ListItem from "@/app/components/ListItem"
 import Link from "next/link"
 
-export const revalidate = 0
+export const revalidate = 86400 // Route config on demand revalidation
 
 type Props = {
   params: { 
@@ -13,15 +13,15 @@ type Props = {
 
 // export const revalidate = 0 do not mix with generateStaticParams()
 
-// export async function generateStaticParams() {
-//   const posts = await getPostsMeta() // all fetches are deduped during build
+export async function generateStaticParams() {
+  const posts = await getPostsMeta() // all fetches are deduped during build
 
-//   if (!posts) return []
+  if (!posts) return []
 
-//   const tags = new Set(posts.map(post => post.tags).flat()) // Set() to remove all duplicates
+  const tags = new Set(posts.map(post => post.tags).flat()) // Set() to remove all duplicates
 
-//   return Array.from(tags).map((tag) => ({ tag }))
-// }
+  return Array.from(tags).map((tag) => ({ tag }))
+}
 
 export async function generateMetadata({ params: { tag } }: Props) {
 

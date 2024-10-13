@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { FaArrowLeft } from 'react-icons/fa'
 import "highlight.js/styles/github-dark.css"
 
-export const revalidate = 0 // same as doing no-cache
+export const revalidate = 86400 // same as doing no-cache
 
 type Props = {
   params: {

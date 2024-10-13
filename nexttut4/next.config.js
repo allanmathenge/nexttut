@@ -12,7 +12,7 @@ const nextConfig = {
         pathname: '/allanmathenge/mdx/master/images/**',
       }
     ]
-  }
+  } // when bringing in images from a remote source
 }
-// when bringing in images from a remote source
+
 module.exports = nextConfig
