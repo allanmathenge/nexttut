@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { FaArrowLeft } from 'react-icons/fa'
 import "highlight.js/styles/github-dark.css"
 
-export const revalidate = 86400 // same as doing no-cache
+export const revalidate = 86400 // revalidate after 1 day
 
 type Props = {
   params: {
@@ -15,14 +15,14 @@ type Props = {
 
 // gerateStatic params and revalidate = 0 do not mix
 
-// export async function generateStaticParams() {
+export async function generateStaticParams() {
 
-//   const posts = await getPostsMeta() // deduped- all the fetches are deduped during the build 
-// if (!posts) return []
-//   return posts.map((post) => ({
-//     postId: post.id
-//   }))
-// }
+  const posts = await getPostsMeta() // deduped- all the fetches are deduped during the build 
+  if (!posts) return []
+  return posts.map((post) => ({
+    postId: post.id
+  }))
+}
 
 export async function generateMetadata({ params: { postId }}: Props) {
 
