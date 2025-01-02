@@ -1,12 +1,13 @@
 import React from 'react'
 
-export default async function fetchUser(_id) {
-  console.log(_id)
-  const res = await fetch(`http://localhost:3000/api/users/${_id}`)
+export default async function fetchUser(id) {
+  const res = await fetch(`http://localhost:3000/api/user/${id}`)
 
   if (!res.ok) {
     return res.json("Error fetching user")
   }
 
-  return res.json()
+  const data = await res.json()
+
+  return data
 }
