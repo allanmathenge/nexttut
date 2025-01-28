@@ -26,3 +26,16 @@ const totalIncome = {
 for (const revenue in totalIncome) {
     console.log(`${revenue} -+> ${totalIncome[revenue]} `);
 }
+const dog = {
+    paws: 'none',
+    horns: 'absent',
+    skin: 'smooth',
+    move: 'does move'
+};
+for (const breed in dog) {
+    console.log(`${breed} -> ${dog[breed]}`);
+}
+const Rectangle7 = {
+    length: 3,
+    width: 7
+};

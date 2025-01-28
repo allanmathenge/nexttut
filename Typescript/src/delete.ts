@@ -52,3 +52,30 @@ for(const revenue in totalIncome) {
     console.log(`${revenue} -+> ${totalIncome[revenue as keyof MonthlyIncomes1]} `)
 }
 
+interface Animal5 {
+    [key:string]: string
+    horns: string
+    skin: string
+    move: string
+}
+
+const dog: Animal5 = {
+    paws: 'none',
+    horns: 'absent',
+    skin: 'smooth',
+    move: 'does move'
+}
+
+for (const breed in dog) {
+    console.log(`${breed} -> ${dog[breed]}`)
+}
+
+interface Shape7 {
+    length: number
+    width: number
+}
+
+const Rectangle7: Shape7 = {
+    length: 3,
+    width: 7
+}
