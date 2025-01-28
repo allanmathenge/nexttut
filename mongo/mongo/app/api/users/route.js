@@ -16,7 +16,6 @@ export async function GET() {
     } catch (err){
         return new NextResponse("Error fetching users" + err, {status: 500})
     }
-
 }
 
 export async function POST(request) {

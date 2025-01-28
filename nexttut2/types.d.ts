@@ -24,7 +24,7 @@ type User = {
 
 type Post = {
   "userId": number,
-  "id": nuber,
+  "id": number,
   "title": string,
   "body": string
 }
